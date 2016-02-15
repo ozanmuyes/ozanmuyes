@@ -1,13 +1,13 @@
 {
-  "name": "foundation-zurb-template",
-  "version": "1.0.0",
-  "description": "Official ZURB Template for Foundation for Sites.",
+  "name": "ozanmuyes",
+  "version": "0.1.0",
+  "description": "Ozan Müyesseroğlu's resume and blog web application.",
   "main": "gulpfile.js",
   "scripts": {
     "start": "gulp",
     "build": "gulp build --production"
   },
-  "author": "ZURB <foundation@zurb.com>",
+  "author": "Ozan Müyesseroğlu <ozanmuyes@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "browser-sync": "^2.10.0",
@@ -31,11 +31,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/zurb/foundation-zurb-template.git"
+    "url": "https://github.com/ozanmuyes/ozanmuyes.git"
   },
   "bugs": {
-    "url": "https://github.com/zurb/foundation-sites/issues",
-    "email": "foundation@zurb.com"
+    "url": "https://github.com/ozanmuyes/ozanmuyes/issues",
+    "email": "ozanmuyes@gmail.com"
   },
   "private": true
 }
