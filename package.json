@@ -1,6 +1,6 @@
 {
   "name": "ozanmuyes",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Ozan Müyesseroğlu's resume and blog web application.",
   "main": "gulpfile.js",
   "scripts": {
