@@ -24,7 +24,10 @@ var PATHS = {
   ],
   sass: [
     'bower_components/foundation-sites/scss',
-    'bower_components/motion-ui/src/'
+    'bower_components/motion-ui/src/',
+    'bower_components/font-awesome/scss',
+    'bower_components/flexslider/flexslider.css',
+    'bower_components/magnific-popup/dist/magnific-popup.css'
   ],
   javascript: [
     'bower_components/jquery/dist/jquery.js',
@@ -51,6 +54,10 @@ var PATHS = {
     'bower_components/foundation-sites/js/foundation.tabs.js',
     'bower_components/foundation-sites/js/foundation.toggler.js',
     'bower_components/foundation-sites/js/foundation.tooltip.js',
+    'bower_components/flexslider/jquery.flexslider.js',
+    'bower_components/waypoints/lib/jquery.waypoints.js',
+    'bower_components/FitText.js/jquery.fittext.js',
+    'bower_components/magnific-popup/dist/jquery.magnific-popup.js',
     'src/assets/js/**/!(app).js',
     'src/assets/js/app.js'
   ]
@@ -160,7 +167,7 @@ gulp.task('images', function() {
 
 // Build the "dist" folder by running all of the above tasks
 gulp.task('build', function(done) {
-  sequence('clean', ['pages', 'sass', 'javascript', 'images', 'copy'], 'styleguide', done);
+  sequence('clean', ['pages', 'sass', 'javascript', 'images', 'copy', 'fonts'], 'styleguide', done);
 });
 
 // Start a server with LiveReload to preview the site in
@@ -169,6 +176,19 @@ gulp.task('server', ['build'], function() {
     server: 'dist', port: PORT
   });
 });
+
+gulp.task('font-awesome-fonts', function() {
+  return gulp.src('bower_components/font-awesome/fonts/**.*')
+    .pipe(gulp.dest('dist/assets/fonts'));
+});
+gulp.task('flexslider-fonts', function() {
+  return gulp.src('bower_components/flexslider/fonts/**.*')
+    .pipe(gulp.dest('dist/assets/fonts'));
+});
+gulp.task('fonts', function(done) {
+  sequence('font-awesome-fonts', 'flexslider-fonts', done);
+});
+
 
 // Build the site, run the server, and watch for file changes
 gulp.task('default', ['build', 'server'], function() {

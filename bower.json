@@ -16,7 +16,12 @@
   ],
   "dependencies": {
     "foundation-sites": "~6.1.0",
-    "motion-ui": "~1.1.0"
+    "motion-ui": "~1.1.0",
+    "font-awesome": "fontawesome#~4.5.0",
+    "waypoints": "~4.0.0",
+    "flexslider": "~2.6.0",
+    "FitText.js": "~1.2.0",
+    "magnific-popup": "~1.0.1"
   },
   "private": true
 }
