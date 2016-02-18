@@ -43,3 +43,139 @@
 
 @include motion-ui-transitions;
 @include motion-ui-animations;
+
+// TODO Export below codes to _site.scss
+
+// Header
+  header {
+    position: relative;
+    height: 50rem;
+    min-height: 31.25rem;
+    background-color: $black;
+    background-image: url(../img/header-background.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    .banner {
+      // TODO vertically center this element
+
+      .banner-text {
+        color: white;
+
+        h1 {
+          text-shadow: 0px 1px 3px rgba(0, 0, 0, .8);
+        }
+
+        h3 {
+          text-shadow: 0px 1px 2px rgba(0, 0, 0, .5);
+        }
+      }
+    }
+  }
+
+  .social-links {
+    @extend .menu;
+    @extend .simple;
+
+    li {
+      a {
+        padding: 0;
+        margin-top: $global-margin * 0.75;
+        margin-bottom: $global-margin * 0.75;
+
+        // &>i {
+        //   margin-right: 0;
+        // }
+      }
+    }
+  }
+
+  // The container element of the element has this class MUST have "position: relative;" rule
+  .footer {
+    position: absolute;
+    bottom: $global-margin;
+    left: 0;
+  }
+
+// About
+  #about {
+    background-color: #2b2b2b;
+
+    .profile-picture {
+      border-radius: 100%;
+    }
+  }
+
+// Resume
+  #resume {
+    background-color: #fff;
+  }
+
+// Call-to-action
+  #call-to-action {
+    background-color: #212121;
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+
+    h1 {
+      color: white;
+    }
+  }
+
+// Quotes
+  #quotes {
+    .text-container {
+      padding-top: 96px;
+      padding-bottom: 66px;
+    }
+  }
+
+// Footer
+  #go-top {
+    position: absolute;
+    top: -24px;
+    left: 50%;
+    margin-left: -30px;
+
+    a {
+      text-decoration: none;
+      border: 0 none;
+      display: block;
+      width: 60px;
+      height: 60px;
+      background-color: #525252;
+
+      -webkit-transition: all 0.2s ease-in-out;
+      -moz-transition: all 0.2s ease-in-out;
+      -o-transition: all 0.2s ease-in-out;
+      -ms-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out;
+
+      color: #fff;
+      font-size: 21px;
+      line-height: 60px;
+      border-radius: 100%;
+
+      &:hover {
+        background-color: #0F9095;
+      }
+    }
+  }
+
+  .copyright {
+    li {
+      display: inline-block;
+
+      &:before {
+        content: "\2022";
+        padding-left: 0.25rem;
+        padding-right: 0.625rem;
+        color: #095153;
+      }
+
+      &:first-child:before {
+        display: none;
+      }
+    }
+  }

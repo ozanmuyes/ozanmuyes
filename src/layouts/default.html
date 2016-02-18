@@ -14,75 +14,74 @@
   </head>
 
   <body>
-    <header id="home">
-      <nav id="nav-wrap">
+    <header id="home" class="row expanded">
+      {{!-- <nav id="nav-wrap">
         <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
         <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
 
         <ul id="nav" class="nav">
-          <li class="current"><a class="smoothscroll" href="#home">Home</a></li>
-          <li><a class="smoothscroll" href="#about">About</a></li>
-          <li><a class="smoothscroll" href="#resume">Resume</a></li>
-          <li><a class="smoothscroll" href="#portfolio">Works</a></li>
-          <li><a class="smoothscroll" href="#testimonials">Testimonials</a></li>
-          <li><a class="smoothscroll" href="#contact">Contact</a></li>
+          <li class="current"><a class="smooth-scroll" href="#home">Home</a></li>
+          <li><a class="smooth-scroll" href="#about">About</a></li>
+          <li><a class="smooth-scroll" href="#resume">Resume</a></li>
+          <li><a class="smooth-scroll" href="#portfolio">Works</a></li>
+          <li><a class="smooth-scroll" href="#quotes">Testimonials</a></li>
+          <li><a class="smooth-scroll" href="#contact">Contact</a></li>
         </ul>
-      </nav>
+      </nav> --}}
 
-      <div class="row banner">
+      <div class="medium-6 medium-offset-3 text-center banner">
         <div class="banner-text">
           <h1 class="responsive-headline">I'm Jonathan Doe.</h1>
 
           <h3>
             I'm a Manila based <span>graphic designer</span>, <span>illustrator</span> and
             <span>webdesigner</span> creating awesome and effective visual identities for companies
-            of all sizes around the globe. Let's <a class="smoothscroll" href="#about">start scrolling</a>
-            and learn more <a class="smoothscroll" href="#about">about me</a>.
+            of all sizes around the globe. Let's <a class="smooth-scroll" href="#about">start scrolling</a>
+            and learn more <a class="smooth-scroll" href="#about">about me</a>.
           </h3>
 
           <hr>
 
-          <ul class="social">
-            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-            <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-            <li><a href="#"><i class="fa fa-skype"></i></a></li>
+          <ul class="social-links">
+            <li><a href="https://github.com/ozanmuyes" target="_blank" role="button"><i class="fa fa-fw fa-2x fa-github"></i></a></li>
+            <li><a href="http://stackoverflow.com/u/250453" target="_blank" role="button"><i class="fa fa-fw fa-2x fa-stack-overflow"></i></a></li>
+            <li><a href="https://tr.linkedin.com/in/ozanmuyes" target="_blank" role="button"><i class="fa fa-fw fa-2x fa-linkedin"></i></a></li>
+            <li><a href="https://twitter.com/ozanmuyes" target="_blank" role="button"><i class="fa fa-fw fa-2x fa-twitter"></i></a></li>
+            <li><a href="mailto:ozanmuyes@gmail.com" target="_blank" role="button"><i class="fa fa-fw fa-2x fa-envelope-o"></i></a></li>
           </ul>
         </div>
       </div>
 
-      <p class="scrolldown">
-        <a class="smoothscroll" href="#about"><i class="icon-down-circle"></i></a>
-      </p>
+      <div class="small-12 text-center footer" role="presentation">
+        <a href="#about" class="smooth-scroll" role="button" title="Go to About"><i class="fa fa-2x fa-angle-double-down"></i></a>
+      </div>
     </header>
 
     <section id="about">
       <div class="row">
-        <div class="three columns">
-          <img class="profile-pic" src="{{root}}assets/img/profilepic.jpg" alt="" />
+        <div class="medium-3 columns">
+          <img class="profile-picture" src="{{root}}assets/img/profilepic.jpg" alt="">
         </div>
 
-        <div class="nine columns main-col">
+        <div class="medium-9 columns">
           <h2>About Me</h2>
 
-          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-          laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
-          architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-          aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
-          voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
-          consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et
-          dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem
-          ullam corporis suscipit laboriosam.
+          <p>
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+            laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+            architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
+            aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
+            voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+            consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et
+            dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum
+            exercitationem ullam corporis suscipit laboriosam.
           </p>
 
           <div class="row">
-            <div class="columns contact-details">
+            <div class="medium-6 columns">
               <h2>Contact Details</h2>
 
-              <p class="address">
+              <p>
                 <span>Jonathan Doe</span><br>
                 <span>
                   1600 Amphitheatre Parkway<br>
@@ -93,7 +92,7 @@
               </p>
             </div>
 
-            <div class="columns download">
+            <div class="medium-6 columns">
               <p>
                 <a href="#" class="button"><i class="fa fa-download"></i>Download Resume</a>
               </p>
@@ -105,70 +104,70 @@
 
     <section id="resume">
       <!-- Education -->
-      <div class="row education">
-        <div class="three columns header-col">
-          <h1><span>Education</span></h1>
+      <div class="row">
+        <div class="medium-3 columns">
+          <h1>Education</h1>
         </div>
 
-        <div class="nine columns main-col">
-          <div class="row item">
-            <div class="twelve columns">
-              <h3>University of Life</h3>
+        <div class="medium-9 columns">
+          <div class="column row">
+            <h3>University of Life</h3>
 
-              <p class="info">
-                Master in Graphic Design
-                <span>&bull;</span>
-                <em class="date">April 2007</em>
-              </p>
+            <p>
+              Master in Graphic Design
+              <span>&bull;</span>
+              <em class="date">April 2007</em>
+            </p>
 
-              <p>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
-                dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes,
-                nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
-                sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec,
-                vulputate eget, arcu. Nullam dictum felis eu pede mollis pretium.
-              </p>
-            </div>
+            <p>
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
+              dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes,
+              nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
+              sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec,
+              vulputate eget, arcu. Nullam dictum felis eu pede mollis pretium.
+            </p>
           </div>
         </div>
       </div>
+
+      <hr>
 
       <!-- Work -->
-      <div class="row work">
-        <div class="three columns header-col">
-          <h1><span>Work</span></h1>
+      <div class="row">
+        <div class="medium-3 columns">
+          <h1>Work</h1>
         </div>
 
-        <div class="nine columns main-col">
-          <div class="row item">
-            <div class="twelve columns">
-              <h3>Awesome Design Studio</h3>
+        <div class="medium-9 columns">
+          <div class="column row">
+            <h3>Awesome Design Studio</h3>
 
-              <p class="info">
-                Senior UX Designer
-                <span>&bull;</span>
-                <em class="date">March 2010 - Present</em>
-              </p>
+            <p>
+              Senior UX Designer
+              <span>&bull;</span>
+              <em class="date">March 2010 - Present</em>
+            </p>
 
-              <p>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
-                dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes,
-                nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
-                sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec,
-                vulputate eget, arcu. Nullam dictum felis eu pede mollis pretium.
-              </p>
-            </div>
+            <p>
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
+              dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes,
+              nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
+              sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec,
+              vulputate eget, arcu. Nullam dictum felis eu pede mollis pretium.
+            </p>
           </div>
         </div>
       </div>
 
+      <hr>
+
       <!-- Skills -->
-      <div class="row skill">
-        <div class="three columns header-col">
-          <h1><span>Skills</span></h1>
+      <div class="row">
+        <div class="medium-3 columns">
+          <h1>Skills</h1>
         </div>
 
-        <div class="nine columns main-col">
+        <div class="medium-9 columns">
           <p>
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
             laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
@@ -177,169 +176,87 @@
             voluptatem sequi nesciunt.
           </p>
 
-          <div class="bars">
-            <ul class="skills">
-              <li><span class="bar-expand photoshop"></span><em>Photoshop</em></li>
-              <li><span class="bar-expand illustrator"></span><em>Illustrator</em></li>
-              <li><span class="bar-expand wordpress"></span><em>Wordpress</em></li>
-              <li><span class="bar-expand css"></span><em>CSS</em></li>
-              <li><span class="bar-expand html5"></span><em>HTML5</em></li>
-              <li><span class="bar-expand jquery"></span><em>jQuery</em></li>
-            </ul>
-          </div>
+          <ul>
+            <li><em>Photoshop</em></li>
+            <li><em>Illustrator</em></li>
+            <li><em>Wordpress</em></li>
+            <li><em>CSS</em></li>
+            <li><em>HTML5</em></li>
+            <li><em>jQuery</em></li>
+          </ul>
         </div>
       </div>
     </section>
 
     <section id="portfolio">
       <div class="row">
-        <div class="twelve columns collapsed">
-          <h1>Check Out Some of My Works.</h1>
+        <div class="small-12 columns small-collapse">
+          <h1 class="text-center">Check Out Some of My Works.</h1>
 
           <!-- portfolio-wrapper -->
-          <div id="portfolio-wrapper" class="bgrid-quarters s-bgrid-thirds cf">
-            <div class="columns portfolio-item">
-              <div class="item-wrap">
-                <a href="#modal-01" title="">
-                  <img alt="" src="{{root}}assets/img/portfolio/coffee.jpg">
+          <div id="portfolio-wrapper" class="row small-up-2 medium-up-3 large-up-4">
+            <div class="column portfolio-item">
+              <a href="#modal-01" title="">
+                <img alt="" src="{{root}}assets/img/portfolio/coffee.jpg">
 
-                  <div class="overlay">
-                    <div class="portfolio-item-meta">
-                      <h5>Coffee</h5>
+                <div class="overlay">
+                  <div class="portfolio-item-meta">
+                    <h5>Coffee</h5>
 
-                      <p>Illustrration</p>
-                    </div>
+                    <p>Illustrration</p>
                   </div>
+                </div>
 
-                  <div class="link-icon"><i class="icon-plus"></i></div>
-                </a>
-              </div>
+                <div class="link-icon"><i class="icon-plus"></i></div>
+              </a>
             </div>
 
-            <div class="columns portfolio-item">
-              <div class="item-wrap">
-                <a href="#modal-02" title="">
-                  <img alt="" src="{{root}}assets/img/portfolio/console.jpg">
+            <div class="column portfolio-item">
+              <a href="#modal-02" title="">
+                <img alt="" src="{{root}}assets/img/portfolio/console.jpg">
 
-                  <div class="overlay">
-                    <div class="portfolio-item-meta">
-                      <h5>Console</h5>
+                <div class="overlay">
+                  <div class="portfolio-item-meta">
+                    <h5>Console</h5>
 
-                      <p>Web Development</p>
-                    </div>
+                    <p>Web Development</p>
                   </div>
+                </div>
 
-                  <div class="link-icon"><i class="icon-plus"></i></div>
-                </a>
-              </div>
+                <div class="link-icon"><i class="icon-plus"></i></div>
+              </a>
             </div>
 
-            <div class="columns portfolio-item">
-              <div class="item-wrap">
-                <a href="#modal-03" title="">
-                  <img alt="" src="{{root}}assets/img/portfolio/judah.jpg">
+            <div class="column portfolio-item">
+              <a href="#modal-03" title="">
+                <img alt="" src="{{root}}assets/img/portfolio/retrocam.jpg">
 
-                  <div class="overlay">
-                    <div class="portfolio-item-meta">
-                      <h5>Judah</h5>
+                <div class="overlay">
+                  <div class="portfolio-item-meta">
+                    <h5>Retro</h5>
 
-                      <p>Webdesign</p>
-                    </div>
+                    <p>Webdesign</p>
                   </div>
+                </div>
 
-                  <div class="link-icon"><i class="icon-plus"></i></div>
-                </a>
-              </div>
+                <div class="link-icon"><i class="icon-plus"></i></div>
+              </a>
             </div>
 
-            <div class="columns portfolio-item">
-              <div class="item-wrap">
-                <a href="#modal-04" title="">
-                  <img alt="" src="{{root}}assets/img/portfolio/into-the-light.jpg">
+            <div class="column portfolio-item">
+              <a href="#modal-04" title="">
+                <img alt="" src="{{root}}assets/img/portfolio/into-the-light.jpg">
 
-                  <div class="overlay">
-                    <div class="portfolio-item-meta">
-                      <h5>Into The Light</h5>
+                <div class="overlay">
+                  <div class="portfolio-item-meta">
+                    <h5>Into The Light</h5>
 
-                      <p>Photography</p>
-                    </div>
+                    <p>Photography</p>
                   </div>
+                </div>
 
-                  <div class="link-icon"><i class="icon-plus"></i></div>
-                </a>
-              </div>
-            </div>
-
-            <div class="columns portfolio-item">
-              <div class="item-wrap">
-                <a href="#modal-05" title="">
-                  <img alt="" src="{{root}}assets/img/portfolio/farmerboy.jpg">
-
-                  <div class="overlay">
-                    <div class="portfolio-item-meta">
-                      <h5>Farmer Boy</h5>
-
-                      <p>Branding</p>
-                    </div>
-                  </div>
-
-                  <div class="link-icon"><i class="icon-plus"></i></div>
-                </a>
-              </div>
-            </div>
-
-            <div class="columns portfolio-item">
-              <div class="item-wrap">
-                <a href="#modal-06" title="">
-                  <img alt="" src="{{root}}assets/img/portfolio/girl.jpg">
-
-                  <div class="overlay">
-                    <div class="portfolio-item-meta">
-                      <h5>Girl</h5>
-
-                      <p>Photography</p>
-                    </div>
-                  </div>
-
-                  <div class="link-icon"><i class="icon-plus"></i></div>
-                </a>
-              </div>
-            </div>
-
-            <div class="columns portfolio-item">
-              <div class="item-wrap">
-                <a href="#modal-07" title="">
-                  <img alt="" src="{{root}}assets/img/portfolio/origami.jpg">
-
-                  <div class="overlay">
-                    <div class="portfolio-item-meta">
-                      <h5>Origami</h5>
-
-                      <p>Illustrration</p>
-                    </div>
-                  </div>
-
-                  <div class="link-icon"><i class="icon-plus"></i></div>
-                </a>
-              </div>
-            </div>
-
-            <div class="columns portfolio-item">
-              <div class="item-wrap">
-                <a href="#modal-08" title="">
-                  <img alt="" src="{{root}}assets/img/portfolio/retrocam.jpg">
-
-                  <div class="overlay">
-                    <div class="portfolio-item-meta">
-                      <h5>Retrocam</h5>
-
-                      <p>Web Development</p>
-                    </div>
-                  </div>
-
-                  <div class="link-icon"><i class="icon-plus"></i></div>
-                </a>
-              </div>
+                <div class="link-icon"><i class="icon-plus"></i></div>
+              </a>
             </div>
           </div>
         </div>
@@ -424,96 +341,16 @@
             <a class="popup-modal-dismiss">Close</a>
           </div>
         </div>
-
-        <div id="modal-05" class="popup-modal mfp-hide">
-          <img class="scale-with-grid" src="{{root}}assets/img/portfolio/modals/m-farmerboy.jpg" alt="" />
-
-          <div class="description-box">
-            <h4>Farmer Boy</h4>
-
-            <p>
-              Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum
-              auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.
-            </p>
-
-            <span class="categories"><i class="fa fa-tag"></i>Branding, Webdesign</span>
-          </div>
-
-          <div class="link-box">
-            <a href="http://www.behance.net">Details</a>
-            <a class="popup-modal-dismiss">Close</a>
-          </div>
-        </div>
-
-        <div id="modal-06" class="popup-modal mfp-hide">
-          <img class="scale-with-grid" src="{{root}}assets/img/portfolio/modals/m-girl.jpg" alt="" />
-
-          <div class="description-box">
-            <h4>Girl</h4>
-
-            <p>
-              Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum
-              auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.
-            </p>
-
-            <span class="categories"><i class="fa fa-tag"></i>Photography</span>
-          </div>
-
-          <div class="link-box">
-            <a href="http://www.behance.net">Details</a>
-            <a class="popup-modal-dismiss">Close</a>
-          </div>
-        </div>
-
-        <div id="modal-07" class="popup-modal mfp-hide">
-          <img class="scale-with-grid" src="{{root}}assets/img/portfolio/modals/m-origami.jpg" alt="" />
-
-          <div class="description-box">
-            <h4>Origami</h4>
-
-            <p>
-              Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum
-              auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.
-            </p>
-
-            <span class="categories"><i class="fa fa-tag"></i>Branding, Illustration</span>
-          </div>
-
-          <div class="link-box">
-            <a href="http://www.behance.net">Details</a>
-            <a class="popup-modal-dismiss">Close</a>
-          </div>
-        </div>
-
-        <div id="modal-08" class="popup-modal mfp-hide">
-          <img class="scale-with-grid" src="{{root}}assets/img/portfolio/modals/m-retrocam.jpg" alt="" />
-
-          <div class="description-box">
-            <h4>Retrocam</h4>
-
-            <p>
-              Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum
-              auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.
-            </p>
-
-            <span class="categories"><i class="fa fa-tag"></i>Webdesign, Photography</span>
-          </div>
-
-          <div class="link-box">
-            <a href="http://www.behance.net">Details</a>
-            <a class="popup-modal-dismiss">Close</a>
-          </div>
-        </div>
       </div>
     </section>
 
     <section id="call-to-action">
       <div class="row">
-        <div class="two columns header-col">
+        <div class="medium-2 columns">
           <h1><span>Get Hosting.</span></h1>
         </div>
 
-        <div class="seven columns">
+        <div class="medium-7 columns">
           <h2><a href="http://www.dreamhost.com/r.cgi?287326|STYLESHOUT">Host This Template on Dreamhost.</a></h2>
 
           <p>
@@ -523,20 +360,20 @@
           </p>
         </div>
 
-        <div class="three columns action">
+        <div class="medium-3 columns">
           <a href="http://www.dreamhost.com/r.cgi?287326|STYLESHOUT" class="button">Sign Up Now</a>
         </div>
       </div>
     </section>
 
-    <section id="testimonials">
+    <section id="quotes">
       <div class="text-container">
         <div class="row">
-          <div class="two columns header-col">
-            <h1><span>Client Testimonials</span></h1>
+          <div class="medium-2 columns">
+            <h1><span>Admiring Quotes</span></h1>
           </div>
 
-          <div class="ten columns flex-container">
+          <div class="medium-10 columns">
             <div class="flexslider">
               <ul class="slides">
                 <li>
@@ -572,12 +409,12 @@
     </section>
 
     <section id="contact">
-      <div class="row section-head">
-        <div class="two columns header-col">
+      <div class="row">
+        <div class="medium-2 columns">
           <h1><span>Get In Touch.</span></h1>
         </div>
 
-        <div class="ten columns">
+        <div class="medium-10 columns">
           <p class="lead">
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
             laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
@@ -588,7 +425,7 @@
       </div>
 
       <div class="row">
-        <div class="eight columns">
+        <div class="medium-8 columns">
           <form action="" method="post" id="contactForm" name="contactForm">
             <fieldset>
               <div>
@@ -631,11 +468,11 @@
           </div>
         </div>
 
-        <aside class="four columns footer-widgets">
-          <div class="widget widget_contact">
+        <aside class="medium-4 columns">
+          <div>
             <h4>Address and Phone</h4>
 
-            <p class="address">
+            <p>
               Jonathan Doe
               <br> 1600 Amphitheatre Parkway
               <br> Mountain View, CA 94043 US
@@ -644,10 +481,10 @@
             </p>
           </div>
 
-          <div class="widget widget_tweets">
-            <h4 class="widget-title">Latest Tweets</h4>
+          <div>
+            <h4>Latest Tweets</h4>
 
-            <ul id="twitter">
+            <ul>
               <li>
                 <span>
                   This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
@@ -674,27 +511,23 @@
     </section>
 
     <footer>
-      <div class="row">
-        <div class="twelve columns">
-          <ul class="social-links">
-            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-            <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-            <li><a href="#"><i class="fa fa-skype"></i></a></li>
-          </ul>
+      <div id="go-top">
+        <a class="smooth-scroll" title="Back to Top" href="#home"><i class="icon-up-open"></i></a>
+      </div>
 
-          <ul class="copyright">
-            <li>&copy; Copyright 2014 CeeVee</li>
-            <li>Design by <a title="Styleshout" href="http://www.styleshout.com/">Styleshout</a></li>
-          </ul>
-        </div>
+      <div class="column row">
+        <ul class="social-links">
+          <li><a href="https://github.com/ozanmuyes" target="_blank" role="button"><i class="fa fa-fw fa-2x fa-github"></i></a></li>
+          <li><a href="http://stackoverflow.com/u/250453" target="_blank" role="button"><i class="fa fa-fw fa-2x fa-stack-overflow"></i></a></li>
+          <li><a href="https://tr.linkedin.com/in/ozanmuyes" target="_blank" role="button"><i class="fa fa-fw fa-2x fa-linkedin"></i></a></li>
+          <li><a href="https://twitter.com/ozanmuyes" target="_blank" role="button"><i class="fa fa-fw fa-2x fa-twitter"></i></a></li>
+          <li><a href="mailto:ozanmuyes@gmail.com" target="_blank" role="button"><i class="fa fa-fw fa-2x fa-envelope-o"></i></a></li>
+        </ul>
 
-        <div id="go-top">
-          <a class="smoothscroll" title="Back to Top" href="#home"><i class="icon-up-open"></i></a>
-        </div>
+        <ul class="copyright">
+          <li>&copy; Copyright 2014 Ozan</li>
+          <li>Design by <a title="Styleshout" href="http://www.styleshout.com/">Styleshout</a></li>
+        </ul>
       </div>
     </footer>
 
