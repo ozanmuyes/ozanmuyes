@@ -271,7 +271,7 @@ jQuery(document).ready(function($) {
     // initPhotoSwipeFromDOM('#portfolio-wrapper');
 
   // Magnific Popup
-    $('.item-wrap a').magnificPopup({
+    $('.portfolio-item a').magnificPopup({
       type: 'inline',
       fixedContentPos: false,
       removalDelay: 200,
