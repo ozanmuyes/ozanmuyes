@@ -5,6 +5,10 @@
 // @import 'motion-ui';
 @import 'font-awesome';
 
+// @import 'slick.scss';
+// @import 'main'; // photoswipe
+@import 'main'; // magnific-popup
+
 @include foundation-global-styles;
 @include foundation-grid;
 @include foundation-typography;

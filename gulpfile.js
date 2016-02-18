@@ -22,12 +22,15 @@ var PATHS = {
     'src/assets/**/*',
     '!src/assets/{img,js,scss}/**/*'
   ],
+  css: [
+  ],
   sass: [
     'bower_components/foundation-sites/scss',
     'bower_components/motion-ui/src/',
     'bower_components/font-awesome/scss',
-    'bower_components/flexslider/flexslider.css',
-    'bower_components/magnific-popup/dist/magnific-popup.css'
+    // 'bower_components/photoswipe/src/css',
+    'bower_components/magnific-popup/src/css',
+    'bower_components/slick-carousel/slick'
   ],
   javascript: [
     'bower_components/jquery/dist/jquery.js',
@@ -48,7 +51,7 @@ var PATHS = {
     // 'bower_components/foundation-sites/js/foundation.orbit.js',
     'bower_components/foundation-sites/js/foundation.responsiveMenu.js',
     'bower_components/foundation-sites/js/foundation.responsiveToggle.js',
-    'bower_components/foundation-sites/js/foundation.reveal.js',
+    // 'bower_components/foundation-sites/js/foundation.reveal.js',
     'bower_components/foundation-sites/js/foundation.slider.js',
     'bower_components/foundation-sites/js/foundation.sticky.js',
     // 'bower_components/foundation-sites/js/foundation.tabs.js',
@@ -56,7 +59,10 @@ var PATHS = {
     // 'bower_components/foundation-sites/js/foundation.tooltip.js',
     'bower_components/waypoints/lib/jquery.waypoints.js',
     'bower_components/FitText.js/jquery.fittext.js',
+    // 'bower_components/photoswipe/dist/photoswipe.js',
+    // 'bower_components/photoswipe/dist/photoswipe-ui-default.js',
     'bower_components/magnific-popup/dist/jquery.magnific-popup.js',
+    'bower_components/slick-carousel/slick/slick.js',
     'src/assets/js/**/!(app).js',
     'src/assets/js/app.js'
   ]
@@ -107,7 +113,7 @@ gulp.task('styleguide', function(done) {
 
 // Compile Sass into CSS
 // In production, the CSS is compressed
-gulp.task('sass', function() {
+gulp.task('sass-compile', function() {
   var uncss = $.if(isProduction, $.uncss({
     html: ['src/**/*.html'],
     ignore: [
@@ -180,12 +186,21 @@ gulp.task('font-awesome-fonts', function() {
   return gulp.src('bower_components/font-awesome/fonts/**.*')
     .pipe(gulp.dest('dist/assets/fonts'));
 });
-gulp.task('flexslider-fonts', function() {
-  return gulp.src('bower_components/flexslider/fonts/**.*')
-    .pipe(gulp.dest('dist/assets/fonts'));
-});
 gulp.task('fonts', function(done) {
-  sequence('font-awesome-fonts', 'flexslider-fonts', done);
+  sequence('font-awesome-fonts', done);
+});
+
+/**
+ * Converts CSS files to SASS and concatenates them into app.css
+ * Add necessary CSS file paths to FILES.css array above.
+ *
+ * @remarks Original 'sass' task renamed as 'sass-compile', this task proxies to it.
+ * @see https://github.com/zurb/foundation-cli/issues/21#issuecomment-166672512
+ */
+gulp.task('sass', ['sass-compile'], function() {
+  gulp.src(PATHS.css)
+    .pipe($.concat('app.css'))
+    .pipe(gulp.dest('dist/assets/css'));
 });
 
 
@@ -194,7 +209,7 @@ gulp.task('default', ['build', 'server'], function() {
   gulp.watch(PATHS.assets, ['copy']);
   gulp.watch(['src/pages/**/*'], ['pages']);
   gulp.watch(['src/{layouts,partials,helpers,data}/**/*'], ['pages:reset']);
-  gulp.watch(['src/assets/scss/**/{*.scss, *.sass}'], ['sass']);
+  gulp.watch(['src/assets/scss/**/{*.scss, *.sass}'], ['sass-compile']);
   gulp.watch(['src/assets/js/**/*.js'], ['javascript']);
   gulp.watch(['src/assets/img/**/*'], ['images']);
   gulp.watch(['src/styleguide/**'], ['styleguide']);
