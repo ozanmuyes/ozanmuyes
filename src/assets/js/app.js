@@ -1,6 +1,7 @@
 $(document).foundation();
 
 jQuery(document).ready(function($) {
+  var $header = $("header");
 
   // FitText Settings
     setTimeout(function() {
@@ -45,18 +46,21 @@ jQuery(document).ready(function($) {
     });
 
   // Make sure that #header-background-image height is equal to the browser height.
-    $('header').css({
-      'height': $(window).height()
-    });
+    function setHeaderHeight() {
+      var wH = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+      if (wH < 800) {
+        wH = 800;
+      }
+
+      $header.css({
+        "height": wH + "px"
+      });
+    };
+
+    setHeaderHeight();
 
     $(window).on('resize', function() {
-      $('header').css({
-        'height': $(window).height()
-      });
-
-      $('body').css({
-        'width': $(window).width()
-      });
+      setHeaderHeight();
     });
 
   // Fade In/Out Primary Navigation

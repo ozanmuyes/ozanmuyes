@@ -62,7 +62,9 @@
     background-size: cover;
 
     .banner {
-      // TODO vertically center this element
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
 
       .banner-text {
         color: white;
