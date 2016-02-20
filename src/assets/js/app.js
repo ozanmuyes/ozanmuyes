@@ -1,7 +1,8 @@
 $(document).foundation();
 
 jQuery(document).ready(function($) {
-  var $header = $("header");
+  var $window = $(window),
+      $header = $("header");
 
   // FitText Settings
     setTimeout(function() {
@@ -59,26 +60,26 @@ jQuery(document).ready(function($) {
 
     setHeaderHeight();
 
-    $(window).on('resize', function() {
+    $window.on("resize", function() {
       setHeaderHeight();
     });
 
   // Fade In/Out Primary Navigation
-    $(window).on('scroll', function() {
-      var h = $('header').height(),
-          y = $(window).scrollTop(),
-          nav = $('#nav-wrap');
+    // $window.on('scroll', function() {
+    //   var h = $('header').height(),
+    //       y = $window.scrollTop(),
+    //       nav = $('#nav-wrap');
 
-      if ((y > h*.20) && (y < h) && ($(window).outerWidth() > 768)) {
-        nav.fadeOut('fast');
-      } else {
-        if (y < h*.20) {
-          nav.removeClass('opaque').fadeIn('fast');
-        } else {
-          nav.addClass('opaque').fadeIn('fast');
-        }
-      }
-    });
+    //   if ((y > h*.20) && (y < h) && ($window.outerWidth() > 768)) {
+    //     nav.fadeOut('fast');
+    //   } else {
+    //     if (y < h*.20) {
+    //       nav.removeClass('opaque').fadeIn('fast');
+    //     } else {
+    //       nav.addClass('opaque').fadeIn('fast');
+    //     }
+    //   }
+    // });
 
   // PhotoSwipe - http://codepen.io/dimsemenov/pen/ZYbPJM/
     var initPhotoSwipeFromDOM = function(gallerySelector) {
@@ -290,17 +291,17 @@ jQuery(document).ready(function($) {
     });
 
   // Flexslider
-    // $('.flexslider').flexslider({
-    //   namespace: "flex-",
-    //   controlsContainer: ".flex-container",
-    //   animation: 'slide',
-    //   controlNav: true,
-    //   directionNav: false,
-    //   smoothHeight: true,
-    //   slideshowSpeed: 7000,
-    //   animationSpeed: 600,
-    //   randomize: false,
-    // });
+    $('.flexslider').flexslider({
+      namespace: "flex-",
+      controlsContainer: ".flex-container",
+      animation: 'slide',
+      controlNav: true,
+      directionNav: false,
+      smoothHeight: true,
+      slideshowSpeed: 7000,
+      animationSpeed: 600,
+      randomize: false,
+    });
 
   // Contact form
     $('form#contactForm button.submit').click(function() {

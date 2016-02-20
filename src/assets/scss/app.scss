@@ -58,7 +58,7 @@
     background-color: $black;
     background-image: url(../img/header-background.jpg);
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: 50% 50%;
     background-size: cover;
 
     .banner {
@@ -223,6 +223,12 @@
 
 // Quotes
   #quotes {
+    background-image: url(../img/quotes-background.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+
     .text-container {
       padding-top: 96px;
       padding-bottom: 66px;
